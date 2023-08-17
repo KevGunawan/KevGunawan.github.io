@@ -197,7 +197,7 @@ nav ul li {
     .form-group input[type="number"],
     .form-group input[type="date"],
     .form-group textarea {
-        width:97%;
+        width:80%;
         font-size: 16px;
         padding: 15px;
     }
