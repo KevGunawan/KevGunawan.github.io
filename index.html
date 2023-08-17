@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Personal Website</title>
+</head>
+<body>
+    <header>
+        <h1>Kevin Gunawan</h1>
+        <img src="profile.jpg" alt="Your Name">
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#honesty">Basic Info</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+        <div class="resume-button">
+            <a href="KevinGunawanCV&Resume.pdf" download>Download Resume</a>
+        </div>
+    </header>
+
+    <section id="about" class="about-me card">
+        <h2>About Me</h2>
+        <h3>Project Manager</h3>
+        <p>Born in Indonesia but raised in the GTA, I first graduated from Wilfrid Laurier Univeristy with a bachelors in Psychology. I went on to do a Masters in Brain and Cognition in Rotterdam, Netherlands at EUR. After moving back to the GTA and taking some time off, I decided switch gears and work towards a career in computer science. Currently, I am in my 2nd semester at Seneca in the CPA program hopefully planning on graduating in 2024. In my free time, I enjoy hiking, cooking/baking, reading and table top RPGs.</p>
+    </section>
+
+    <section id="honesty" class="honesty-container">
+            <section class="basic-info card">
+                <h3>Basic Information</h3>
+                <ul>
+                    <li>Age: 27</li>
+                    <li>Language: English/Indonesian</li>
+                    <li>Email: kgunawan1@myseneca.ca</li>
+                    <li>Student Number: 177378213</li>
+                    <li>Section: NFF</li>
+                    <li>Instructor: Mark Meritt</li>
+                </ul>
+            </section>
+            <section class="text card">
+                <h3>Honesty Statement</h3>
+                <p><i>I declare that my assessment is wholly my own work in accordance with Seneca Academic Policy. No part of this assessment has been copied manually or electronically from any other source(including web sites) except for the information supplied by the WEB222 instructors and / or made available in this assessment for my use. I also declare that no part of this assignment has been distributed to other students</i></p>
+            </section>
+    </section>
+
+    <section id="education" class="card">
+        <h1>Education</h1>
+        <section class="education-card">
+            <div class="education-info">
+                <div class="date-institution">
+                    <p>Sept 2014 - April 2019</p>
+                    <p>Wilfrid Laurier University</p>
+                </div>
+                <div class="degree-program">
+                    <p>Bachelor of Arts</p>
+                    <p>Cognitive Psychology (Research Specialist)</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="education-card">
+            <div class="education-info">
+                <div class="date-institution">
+                    <p>Aug 2020 - August 2021</p>
+                    <p>Erasmus University Rotterdam</p>
+                </div>
+                <div class="degree-program">
+                    <p>Masters of Science in Psychology</p>
+                    <p>Brain and Cognition</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section id="contact" class="card">
+        <h2>Contact Me</h2>
+        <form action="https://httpbin.org/post" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" list="city-list" required>
+                <datalist id="city-list">
+                    <option value="Toronto">
+                    <option value="Vancouver">
+                    <option value="Montreal">
+                    <option value="Calgary">
+                    <option value="Ottawa">    
+                </datalist>
+            </div>
+            
+            <div class="form-group">
+                <label for="postal">Postal Code:</label>
+                <input type="text" id="postal" name="postal" pattern="^[A-Za-z]\d[A-Za-z][ ]?\d[A-Za-z]\d$" required>
+            </div>
+            
+            <div class="form-group">
+                <h3>Reason for Contact:</h3>
+                <label for="question">Question</label>
+                <input type="radio" id="question" name="contact-reason" value="Question" required>
+                <label for="comment">Comment</label>
+                <input type="radio" id="comment" name="contact-reason" value="Comment" required>
+                <label for="hiring">Hiring</label>
+                <input type="radio" id="hiring" name="contact-reason" value="Hiring" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="hourly-rate">Hourly Rate (if Hiring):</label>
+                <input type="number" id="hourly-rate" name="hourly-rate" min="20" step="1">
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
